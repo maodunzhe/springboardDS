@@ -1,0 +1,1 @@
+Some general notes or practice while learning data science in springboard.
