@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "dating <- read.csv('Speed Dating Data.csv')\ndim(dating)\n",
+    "created" : 1513837448666.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "496390477",
+    "id" : "6896F262",
+    "lastKnownWriteTime" : 2317442166205538096,
+    "last_content_update" : 1513837471054,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
