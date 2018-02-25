@@ -1,0 +1,17 @@
+For this project, the original dataset contains 8378 rows and 195 columns. There are a lot more features in the dataset than the normal case, so I will select certain group of features to serve for certain analysis purposes.
+We will do some explortary data analysis to answer the following questions:
+1. Are there any attributes' preference differences between the male and the female?
+2. What do you think of your fellow men/women's preference about attributes' importance?
+3. What do you think the opposite sex looks for in a date?
+4. How do you measure up yourself?
+5. How do you think others perceive you?
+6. What your partners' real ratings for each attribute?
+
+The data wrangling steps for above questions share a lot in common, the only main difference is choosing different groups of attributes from the original dataset for analysing different perspetives:
+Firstly we will select the 5 or 6 attributes features depending on the certain question plus the id and gender columns. In case for question 1 to 5, each person will give or take a certain fixed rating for each attribute, to avoid extra calculation, we will drop duplicate rows based on selected features and set the index as iid for later convenience.
+From the data description and information output, the values all fall into the expected range for available attributes, so we do not have to worry about dealing with extreme values. The main focus is imputing proper values for NaN and ensure the rating standard is consistent across different rows here:
+
+Dealing with missing values:
+There are rows with all NaN values for each achieved attributes, also rows with only a few columns with NaN values, of course most of the rows contain no NaN values here. For rows contain only NaN values, they will be deleted. For rows contain both NaN and numeric values, the NaN value will be replaced with group mean. 
+Rescaling the attributes' values:
+In case there are certain waves with different scaling system and even in the same system, there are some miscalculation by mistake, so with the imputed data we would like to scale the attribute values to sum up to 100 for each row. After this preprocessing, the comparison and modeling part later make more sense. 
